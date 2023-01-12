@@ -25,7 +25,7 @@ COPY --from=builder /app/dist ./dist
 # Copy dependencies
 COPY --from=builder /app/node_modules ./node_modules
 
-ENV LINE_CHANNEL_SECRET_TOKEN $LINE_CHANNEL_SECRET_TOKEN
+ENV LINE_CHANNEL_ACCESS_TOKEN $LINE_CHANNEL_ACCESS_TOKEN
 
 # Expose port 3000
 EXPOSE 3000
